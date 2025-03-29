@@ -1,0 +1,310 @@
+2025-03-29 10:42:08,241 - __main__ - INFO - 开始模型优化流程
+2025-03-29 10:42:08,241 - __main__ - INFO - 步骤1: 加载和预处理数据
+2025-03-29 10:42:08,241 - data_processor - INFO - 正在加载数据文件: /home/ubuntu/oilfield_project/油田气窜预测优化/data/CO2气窜原始表.csv
+2025-03-29 10:42:08,245 - data_processor - INFO - 成功加载数据，共70行，14列
+2025-03-29 10:42:08,246 - data_processor - INFO - 开始数据预处理
+2025-03-29 10:42:08,247 - data_processor - INFO - 列名已转换为英文，当前列名: block, formation_temperature, formation_pressure, pre_injection_pressure, pressure_level, permeability, oil_viscosity, oil_density, effective_thickness, injection_well_fracturing, well_spacing, porosity, pre_injection_oil_saturation, pv_number
+2025-03-29 10:42:08,255 - data_processor - INFO - 列'block'已进行一热编码
+2025-03-29 10:42:08,258 - data_processor - INFO - 列'injection_well_fracturing'已进行一热编码
+2025-03-29 10:42:08,266 - data_processor - INFO - 列'permeability'检测到6个异常值
+2025-03-29 10:42:08,267 - data_processor - INFO - 列'permeability'的异常值已使用Winsorization方法处理
+2025-03-29 10:42:08,269 - data_processor - INFO - 列'oil_viscosity'检测到2个异常值
+2025-03-29 10:42:08,270 - data_processor - INFO - 列'oil_viscosity'的异常值已使用Winsorization方法处理
+2025-03-29 10:42:08,272 - data_processor - INFO - 列'oil_density'检测到4个异常值
+2025-03-29 10:42:08,273 - data_processor - INFO - 列'oil_density'的异常值已使用Winsorization方法处理
+2025-03-29 10:42:08,274 - data_processor - INFO - 列'effective_thickness'检测到2个异常值
+2025-03-29 10:42:08,275 - data_processor - INFO - 列'effective_thickness'的异常值已使用Winsorization方法处理
+2025-03-29 10:42:08,277 - data_processor - INFO - 列'well_spacing'检测到1个异常值
+2025-03-29 10:42:08,278 - data_processor - INFO - 列'well_spacing'的异常值已使用Winsorization方法处理
+2025-03-29 10:42:08,282 - data_processor - INFO - 列'block_EAST VACUUM'检测到1个异常值
+2025-03-29 10:42:08,284 - data_processor - INFO - 列'block_EAST VACUUM'的异常值已使用Winsorization方法处理
+2025-03-29 10:42:08,285 - data_processor - INFO - 列'block_FORD GERALDINE'检测到1个异常值
+2025-03-29 10:42:08,287 - data_processor - INFO - 列'block_FORD GERALDINE'的异常值已使用Winsorization方法处理
+2025-03-29 10:42:08,289 - data_processor - INFO - 列'block_GARBER'检测到1个异常值
+2025-03-29 10:42:08,290 - data_processor - INFO - 列'block_GARBER'的异常值已使用Winsorization方法处理
+2025-03-29 10:42:08,293 - data_processor - INFO - 列'block_LITTLE CREEK'检测到1个异常值
+2025-03-29 10:42:08,294 - data_processor - INFO - 列'block_LITTLE CREEK'的异常值已使用Winsorization方法处理
+2025-03-29 10:42:08,296 - data_processor - INFO - 列'block_LITTLE KNIFE'检测到1个异常值
+2025-03-29 10:42:08,297 - data_processor - INFO - 列'block_LITTLE KNIFE'的异常值已使用Winsorization方法处理
+2025-03-29 10:42:08,298 - data_processor - INFO - 列'block_MALJAMAR'检测到1个异常值
+2025-03-29 10:42:08,299 - data_processor - INFO - 列'block_MALJAMAR'的异常值已使用Winsorization方法处理
+2025-03-29 10:42:08,301 - data_processor - INFO - 列'block_NORTH COLES LEVEE'检测到1个异常值
+2025-03-29 10:42:08,302 - data_processor - INFO - 列'block_NORTH COLES LEVEE'的异常值已使用Winsorization方法处理
+2025-03-29 10:42:08,304 - data_processor - INFO - 列'block_NORTH CROSS'检测到1个异常值
+2025-03-29 10:42:08,305 - data_processor - INFO - 列'block_NORTH CROSS'的异常值已使用Winsorization方法处理
+2025-03-29 10:42:08,307 - data_processor - INFO - 列'block_NORTHEAST PURDY'检测到1个异常值
+2025-03-29 10:42:08,308 - data_processor - INFO - 列'block_NORTHEAST PURDY'的异常值已使用Winsorization方法处理
+2025-03-29 10:42:08,309 - data_processor - INFO - 列'block_Permian Basin（美国）'检测到1个异常值
+2025-03-29 10:42:08,310 - data_processor - INFO - 列'block_Permian Basin（美国）'的异常值已使用Winsorization方法处理
+2025-03-29 10:42:08,312 - data_processor - INFO - 列'block_QUARANTINE BAY'检测到1个异常值
+2025-03-29 10:42:08,313 - data_processor - INFO - 列'block_QUARANTINE BAY'的异常值已使用Winsorization方法处理
+2025-03-29 10:42:08,315 - data_processor - INFO - 列'block_RANGELY'检测到1个异常值
+2025-03-29 10:42:08,317 - data_processor - INFO - 列'block_RANGELY'的异常值已使用Winsorization方法处理
+2025-03-29 10:42:08,319 - data_processor - INFO - 列'block_SACROC (17 PATTERN)'检测到1个异常值
+2025-03-29 10:42:08,320 - data_processor - INFO - 列'block_SACROC (17 PATTERN)'的异常值已使用Winsorization方法处理
+2025-03-29 10:42:08,323 - data_processor - INFO - 列'block_SACROC (4 PATTERN)'检测到1个异常值
+2025-03-29 10:42:08,324 - data_processor - INFO - 列'block_SACROC (4 PATTERN)'的异常值已使用Winsorization方法处理
+2025-03-29 10:42:08,326 - data_processor - INFO - 列'block_SLAUGHTER ESTATE'检测到1个异常值
+2025-03-29 10:42:08,327 - data_processor - INFO - 列'block_SLAUGHTER ESTATE'的异常值已使用Winsorization方法处理
+2025-03-29 10:42:08,329 - data_processor - INFO - 列'block_SOUTH WELCH'检测到1个异常值
+2025-03-29 10:42:08,331 - data_processor - INFO - 列'block_SOUTH WELCH'的异常值已使用Winsorization方法处理
+2025-03-29 10:42:08,333 - data_processor - INFO - 列'block_TWOFREDS'检测到1个异常值
+2025-03-29 10:42:08,334 - data_processor - INFO - 列'block_TWOFREDS'的异常值已使用Winsorization方法处理
+2025-03-29 10:42:08,335 - data_processor - INFO - 列'block_WEEKS ISLAND'检测到1个异常值
+2025-03-29 10:42:08,336 - data_processor - INFO - 列'block_WEEKS ISLAND'的异常值已使用Winsorization方法处理
+2025-03-29 10:42:08,338 - data_processor - INFO - 列'block_WERTZ'检测到1个异常值
+2025-03-29 10:42:08,339 - data_processor - INFO - 列'block_WERTZ'的异常值已使用Winsorization方法处理
+2025-03-29 10:42:08,340 - data_processor - INFO - 列'block_WEST SUSSEX'检测到1个异常值
+2025-03-29 10:42:08,341 - data_processor - INFO - 列'block_WEST SUSSEX'的异常值已使用Winsorization方法处理
+2025-03-29 10:42:08,343 - data_processor - INFO - 列'block_Weyburn（加拿大）'检测到1个异常值
+2025-03-29 10:42:08,344 - data_processor - INFO - 列'block_Weyburn（加拿大）'的异常值已使用Winsorization方法处理
+2025-03-29 10:42:08,345 - data_processor - INFO - 列'block_唐5块'检测到3个异常值
+2025-03-29 10:42:08,346 - data_processor - INFO - 列'block_唐5块'的异常值已使用Winsorization方法处理
+2025-03-29 10:42:08,348 - data_processor - INFO - 列'block_天95块'检测到7个异常值
+2025-03-29 10:42:08,349 - data_processor - INFO - 列'block_天95块'的异常值已使用Winsorization方法处理
+2025-03-29 10:42:08,350 - data_processor - INFO - 列'block_富-14'检测到1个异常值
+2025-03-29 10:42:08,351 - data_processor - INFO - 列'block_富-14'的异常值已使用Winsorization方法处理
+2025-03-29 10:42:08,353 - data_processor - INFO - 列'block_崔9块'检测到2个异常值
+2025-03-29 10:42:08,354 - data_processor - INFO - 列'block_崔9块'的异常值已使用Winsorization方法处理
+2025-03-29 10:42:08,355 - data_processor - INFO - 列'block_庄13块'检测到2个异常值
+2025-03-29 10:42:08,356 - data_processor - INFO - 列'block_庄13块'的异常值已使用Winsorization方法处理
+2025-03-29 10:42:08,358 - data_processor - INFO - 列'block_树101'检测到1个异常值
+2025-03-29 10:42:08,359 - data_processor - INFO - 列'block_树101'的异常值已使用Winsorization方法处理
+2025-03-29 10:42:08,360 - data_processor - INFO - 列'block_濮1-1井组'检测到1个异常值
+2025-03-29 10:42:08,361 - data_processor - INFO - 列'block_濮1-1井组'的异常值已使用Winsorization方法处理
+2025-03-29 10:42:08,363 - data_processor - INFO - 列'block_联38块'检测到4个异常值
+2025-03-29 10:42:08,364 - data_processor - INFO - 列'block_联38块'的异常值已使用Winsorization方法处理
+2025-03-29 10:42:08,366 - data_processor - INFO - 列'block_腰英台'检测到1个异常值
+2025-03-29 10:42:08,368 - data_processor - INFO - 列'block_腰英台'的异常值已使用Winsorization方法处理
+2025-03-29 10:42:08,370 - data_processor - INFO - 列'block_花26块'检测到4个异常值
+2025-03-29 10:42:08,371 - data_processor - INFO - 列'block_花26块'的异常值已使用Winsorization方法处理
+2025-03-29 10:42:08,373 - data_processor - INFO - 列'block_花32块'检测到2个异常值
+2025-03-29 10:42:08,375 - data_processor - INFO - 列'block_花32块'的异常值已使用Winsorization方法处理
+2025-03-29 10:42:08,377 - data_processor - INFO - 列'block_芳-48'检测到1个异常值
+2025-03-29 10:42:08,378 - data_processor - INFO - 列'block_芳-48'的异常值已使用Winsorization方法处理
+2025-03-29 10:42:08,380 - data_processor - INFO - 列'block_草舍'检测到1个异常值
+2025-03-29 10:42:08,381 - data_processor - INFO - 列'block_草舍'的异常值已使用Winsorization方法处理
+2025-03-29 10:42:08,383 - data_processor - INFO - 列'block_邵23块'检测到4个异常值
+2025-03-29 10:42:08,384 - data_processor - INFO - 列'block_邵23块'的异常值已使用Winsorization方法处理
+2025-03-29 10:42:08,385 - data_processor - INFO - 列'block_邵24块'检测到1个异常值
+2025-03-29 10:42:08,386 - data_processor - INFO - 列'block_邵24块'的异常值已使用Winsorization方法处理
+2025-03-29 10:42:08,388 - data_processor - INFO - 列'block_马35块'检测到3个异常值
+2025-03-29 10:42:08,389 - data_processor - INFO - 列'block_马35块'的异常值已使用Winsorization方法处理
+2025-03-29 10:42:08,390 - data_processor - INFO - 列'block_马38块'检测到4个异常值
+2025-03-29 10:42:08,391 - data_processor - INFO - 列'block_马38块'的异常值已使用Winsorization方法处理
+2025-03-29 10:42:08,393 - data_processor - INFO - 列'block_马3块'检测到3个异常值
+2025-03-29 10:42:08,394 - data_processor - INFO - 列'block_马3块'的异常值已使用Winsorization方法处理
+2025-03-29 10:42:08,396 - data_processor - INFO - 列'block_高 89-4'检测到1个异常值
+2025-03-29 10:42:08,397 - data_processor - INFO - 列'block_高 89-4'的异常值已使用Winsorization方法处理
+2025-03-29 10:42:08,398 - data_processor - INFO - 列'block_黄3'检测到1个异常值
+2025-03-29 10:42:08,399 - data_processor - INFO - 列'block_黄3'的异常值已使用Winsorization方法处理
+2025-03-29 10:42:08,401 - data_processor - INFO - 列'block_黑59'检测到1个异常值
+2025-03-29 10:42:08,402 - data_processor - INFO - 列'block_黑59'的异常值已使用Winsorization方法处理
+2025-03-29 10:42:08,405 - data_processor - INFO - 列'permeability'偏斜度为1.97，已创建对数变换特征
+2025-03-29 10:42:08,406 - data_processor - INFO - 列'oil_density'偏斜度为2.21，已创建对数变换特征
+2025-03-29 10:42:08,407 - data_processor - INFO - 列'effective_thickness'偏斜度为1.73，已创建对数变换特征
+2025-03-29 10:42:08,412 - data_processor - INFO - 目标变量'pv_number'已应用对数变换 (log1p)
+2025-03-29 10:42:08,423 - data_processor - INFO - 使用StandardScaler对11个特征进行归一化
+2025-03-29 10:42:08,554 - data_processor - INFO - 数据预处理完成。处理前：(70, 14)，处理后：(70, 59)
+2025-03-29 10:42:08,554 - data_processor - INFO - 新增特征: {'block_腰英台', 'well_spacing', 'block_Weyburn（加拿大）', 'block_RANGELY', 'block_联38块', 'effective_thickness', 'block_黄3', 'block_SACROC (17 PATTERN)', 'block_WEEKS ISLAND', 'block_邵23块', 'injection_well_fracturing_是', 'block_MALJAMAR', 'block_GARBER', 'block_马3块', 'pv_number_original', 'block_SLAUGHTER ESTATE', 'block_花26块', 'pv_number', 'block_WERTZ', 'block_草舍', 'block_富-14', 'effective_thickness_log', 'block_NORTH COLES LEVEE', 'block_高 89-4', 'block_邵24块', 'block_庄13块', 'block_TWOFREDS', 'block_天95块', 'porosity', 'block_EAST VACUUM', 'block_LITTLE CREEK', 'permeability', 'block_NORTH CROSS', 'permeability_log', 'block_崔9块', 'block_FORD GERALDINE', 'block_LITTLE KNIFE', 'block_QUARANTINE BAY', 'block_马35块', 'oil_viscosity', 'pressure_level', 'block_WEST SUSSEX', 'block_马38块', 'block_SACROC (4 PATTERN)', 'block_唐5块', 'block_濮1-1井组', 'formation_pressure', 'block_黑59', 'pre_injection_pressure', 'block_芳-48', 'block_树101', 'oil_density_log', 'pre_injection_oil_saturation', 'block_SOUTH WELCH', 'oil_density', 'block_花32块', 'block_NORTHEAST PURDY', 'block_Permian Basin（美国）', 'formation_temperature'}
+2025-03-29 10:42:08,555 - __main__ - INFO - 步骤2: 基础特征工程
+2025-03-29 10:42:08,555 - data_processor - INFO - 开始特征工程
+2025-03-29 10:42:08,556 - data_processor - INFO - 创建特征: 迁移性比(mobility_ratio)
+2025-03-29 10:42:08,559 - data_processor - INFO - 创建特征: 重力数(gravity_number)
+2025-03-29 10:42:08,560 - data_processor - INFO - 创建特征: 指进系数(fingering_index)
+2025-03-29 10:42:08,561 - data_processor - INFO - 创建特征: 压力扩散系数(pressure_diffusivity)
+2025-03-29 10:42:08,563 - data_processor - INFO - 创建特征: 相态转化指数(phase_transition_index)
+2025-03-29 10:42:08,565 - data_processor - INFO - 创建特征: 注入强度比(injection_intensity_ratio)
+2025-03-29 10:42:08,566 - data_processor - INFO - 创建特征: 驱替效率(displacement_efficiency)
+2025-03-29 10:42:08,567 - data_processor - INFO - 创建特征: 储层能量(reservoir_energy)
+2025-03-29 10:42:08,569 - data_processor - INFO - 创建特征: CO2溶解度因子(co2_solubility_factor)
+2025-03-29 10:42:08,570 - data_processor - INFO - 创建特征: 压差(pressure_difference)
+2025-03-29 10:42:08,571 - data_processor - INFO - 创建特征: CO2/原油流动性对比(co2_oil_mobility_contrast)
+2025-03-29 10:42:08,573 - data_processor - INFO - 创建特征: 驱替前缘稳定性指数(displacement_front_stability)
+2025-03-29 10:42:08,575 - data_processor - INFO - 创建特征: 储层储能系数(reservoir_storage_coeff)
+2025-03-29 10:42:08,575 - data_processor - INFO - 跳过创建相态迁移性指数(phase_mobility_index)，因为它在NaN报告中被识别为有问题的特征
+2025-03-29 10:42:08,576 - data_processor - INFO - 创建特征交互项: formation_temperature_formation_pressure_interaction
+2025-03-29 10:42:08,577 - data_processor - INFO - 创建特征交互项: formation_temperature_permeability_interaction
+2025-03-29 10:42:08,578 - data_processor - INFO - 创建特征交互项: formation_temperature_porosity_interaction
+2025-03-29 10:42:08,579 - data_processor - INFO - 创建特征交互项: formation_temperature_well_spacing_interaction
+2025-03-29 10:42:08,580 - data_processor - INFO - 创建特征交互项: formation_temperature_oil_viscosity_interaction
+2025-03-29 10:42:08,581 - data_processor - INFO - 创建特征交互项: formation_temperature_effective_thickness_interaction
+2025-03-29 10:42:08,582 - data_processor - INFO - 创建特征交互项: formation_pressure_permeability_interaction
+2025-03-29 10:42:08,583 - data_processor - INFO - 创建特征交互项: formation_pressure_porosity_interaction
+2025-03-29 10:42:08,584 - data_processor - INFO - 创建特征交互项: formation_pressure_well_spacing_interaction
+2025-03-29 10:42:08,585 - data_processor - INFO - 创建特征交互项: formation_pressure_oil_viscosity_interaction
+2025-03-29 10:42:08,586 - data_processor - INFO - 创建特征交互项: formation_pressure_effective_thickness_interaction
+2025-03-29 10:42:08,587 - data_processor - INFO - 创建特征交互项: permeability_porosity_interaction
+2025-03-29 10:42:08,588 - data_processor - INFO - 创建特征交互项: permeability_well_spacing_interaction
+2025-03-29 10:42:08,589 - data_processor - INFO - 创建特征交互项: permeability_oil_viscosity_interaction
+2025-03-29 10:42:08,590 - data_processor - INFO - 创建特征交互项: permeability_effective_thickness_interaction
+2025-03-29 10:42:08,591 - data_processor - INFO - 创建特征交互项: porosity_well_spacing_interaction
+2025-03-29 10:42:08,592 - data_processor - INFO - 创建特征交互项: porosity_oil_viscosity_interaction
+2025-03-29 10:42:08,593 - data_processor - INFO - 创建特征交互项: porosity_effective_thickness_interaction
+2025-03-29 10:42:08,594 - data_processor - INFO - 创建特征交互项: well_spacing_oil_viscosity_interaction
+2025-03-29 10:42:08,595 - data_processor - INFO - 创建特征交互项: well_spacing_effective_thickness_interaction
+2025-03-29 10:42:08,596 - data_processor - INFO - 创建特征交互项: oil_viscosity_effective_thickness_interaction
+2025-03-29 10:42:08,597 - data_processor - INFO - 创建非线性特征: formation_temperature_squared
+2025-03-29 10:42:08,599 - data_processor - INFO - 创建非线性特征: formation_temperature_log_abs
+2025-03-29 10:42:08,600 - data_processor - INFO - 创建非线性特征: formation_pressure_squared
+2025-03-29 10:42:08,602 - data_processor - INFO - 创建非线性特征: formation_pressure_log_abs
+2025-03-29 10:42:08,603 - data_processor - INFO - 创建非线性特征: permeability_squared
+2025-03-29 10:42:08,604 - data_processor - INFO - 创建非线性特征: permeability_log_abs
+2025-03-29 10:42:08,605 - data_processor - INFO - 创建非线性特征: porosity_squared
+2025-03-29 10:42:08,607 - data_processor - INFO - 创建非线性特征: porosity_log_abs
+2025-03-29 10:42:08,608 - data_processor - INFO - 创建非线性特征: well_spacing_squared
+2025-03-29 10:42:08,610 - data_processor - INFO - 创建非线性特征: well_spacing_log_abs
+2025-03-29 10:42:08,611 - data_processor - INFO - 创建非线性特征: oil_viscosity_squared
+2025-03-29 10:42:08,613 - data_processor - INFO - 创建非线性特征: oil_viscosity_log_abs
+2025-03-29 10:42:08,614 - data_processor - INFO - 创建非线性特征: effective_thickness_squared
+2025-03-29 10:42:08,616 - data_processor - INFO - 创建非线性特征: effective_thickness_log_abs
+2025-03-29 10:42:08,618 - data_processor - INFO - 创建特征: 重力/粘性力比值(gravity_viscous_ratio)
+2025-03-29 10:42:08,619 - data_processor - INFO - 创建特征: 渗透率与孔隙度比值(perm_porosity_ratio)
+2025-03-29 10:42:08,620 - data_processor - INFO - 创建特征: 井距与有效厚度比值(spacing_thickness_ratio)
+2025-03-29 10:42:08,620 - data_processor - INFO - 跳过创建增强相态转换特征，因为它们在NaN报告中被识别为有问题的特征
+2025-03-29 10:42:08,621 - data_processor - INFO - 创建特征: 压力-粘度-温度三交互(pressure_visc_temp_interaction)
+2025-03-29 10:42:08,622 - data_processor - INFO - 跳过创建粘弹性指数(viscoelastic_index)，因为它在NaN报告中被识别为有问题的特征
+2025-03-29 10:42:08,623 - data_processor - INFO - 创建特征: 注入效率(injection_efficiency)
+2025-03-29 10:42:08,624 - data_processor - INFO - 创建特征: 压力响应比(pressure_response_ratio)
+2025-03-29 10:42:08,626 - data_processor - INFO - 创建特征: 流动能力(flow_capacity)
+2025-03-29 10:42:08,627 - data_processor - INFO - 创建特征: 扩散时间尺度(diffusion_time_scale)
+2025-03-29 10:42:08,628 - data_processor - INFO - 创建特征: 综合稳定性指数(combined_stability_index)
+2025-03-29 10:42:08,629 - data_processor - INFO - 跳过创建指进指数非线性变换，因为它们在NaN报告中被识别为有问题的特征
+2025-03-29 10:42:08,647 - data_processor - INFO - 特征工程完成，数据已保存到 /home/ubuntu/oilfield_project/油田气窜预测优化/data/cleaned_engineered_features.csv
+2025-03-29 10:42:08,647 - __main__ - INFO - 步骤3: 增强特征工程
+2025-03-29 10:42:08,647 - enhanced_features - INFO - 开始创建物理约束特征
+2025-03-29 10:42:08,649 - enhanced_features - INFO - 创建特征: 压力差(pressure_difference)
+2025-03-29 10:42:08,650 - enhanced_features - INFO - 创建特征: 渗透率-孔隙度比(perm_porosity_ratio)
+2025-03-29 10:42:08,651 - enhanced_features - INFO - 创建特征: 井距-厚度比(spacing_thickness_ratio)
+2025-03-29 10:42:08,652 - enhanced_features - INFO - 创建特征: 储层能量(reservoir_energy)
+2025-03-29 10:42:08,653 - enhanced_features - INFO - 创建特征: 相迁移性指数(phase_mobility_index)
+2025-03-29 10:42:08,654 - enhanced_features - INFO - 创建特征: 驱替效率(displacement_efficiency)
+2025-03-29 10:42:08,655 - enhanced_features - INFO - 创建特征: 注入效率(injection_efficiency)
+2025-03-29 10:42:08,656 - enhanced_features - INFO - 创建特征: 流动能力(flow_capacity)
+2025-03-29 10:42:08,657 - enhanced_features - INFO - 创建特征: 综合稳定性指数(combined_stability_index)
+2025-03-29 10:42:08,658 - enhanced_features - INFO - 创建特征: CO2溶解度因子(co2_solubility_factor)
+2025-03-29 10:42:08,658 - enhanced_features - INFO - 开始创建特征交互项
+2025-03-29 10:42:08,857 - enhanced_features - INFO - 选择了5个顶部特征用于交互项创建
+2025-03-29 10:42:08,871 - enhanced_features - INFO - 创建了20个交互特征
+2025-03-29 10:42:08,871 - enhanced_features - INFO - 开始创建非线性变换特征
+2025-03-29 10:42:12,077 - enhanced_features - INFO - 创建了398个非线性变换特征
+2025-03-29 10:42:12,078 - enhanced_features - INFO - 使用hybrid方法选择最优特征
+2025-03-29 10:42:12,102 - enhanced_features - INFO - 将选择8个特征
+2025-03-29 10:42:13,998 - enhanced_features - INFO - 最终选择了23个特征
+2025-03-29 10:42:14,004 - __main__ - INFO - 步骤4: 测试不同的残差模型
+2025-03-29 10:42:14,005 - __main__ - INFO - 训练和评估 random_forest 残差模型
+2025-03-29 10:42:14,007 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:14,320 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:14,323 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:14,345 - residual_model - INFO - 物理模型 R²: -0.4637, RMSE: 0.2110, MAE: 0.1187
+2025-03-29 10:42:14,345 - residual_model - INFO - 残差模型 R²: 0.9160, RMSE: 0.0505, MAE: 0.0146
+2025-03-29 10:42:14,345 - residual_model - INFO - R²改进: inf%, RMSE改进: 76.05%, MAE改进: 87.73%
+2025-03-29 10:42:14,345 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:14,347 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:14,368 - residual_model - INFO - 物理模型 R²: -0.2690, RMSE: 0.1101, MAE: 0.0507
+2025-03-29 10:42:14,368 - residual_model - INFO - 残差模型 R²: 0.9951, RMSE: 0.0068, MAE: 0.0027
+2025-03-29 10:42:14,369 - residual_model - INFO - R²改进: inf%, RMSE改进: 93.80%, MAE改进: 94.77%
+2025-03-29 10:42:14,371 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:14,371 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:14,693 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:14,715 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:14,716 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:15,034 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:15,056 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:15,057 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:15,372 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:15,395 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:15,397 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:15,868 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:15,897 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:15,898 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:16,219 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:16,240 - residual_model - INFO - 交叉验证 - 物理模型平均R²: -0.5069
+2025-03-29 10:42:16,240 - residual_model - INFO - 交叉验证 - 残差模型平均R²: 0.9024
+2025-03-29 10:42:16,240 - residual_model - INFO - 交叉验证 - R²改进: inf%
+2025-03-29 10:42:16,240 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:16,240 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:18,567 - residual_model - INFO - 预测结果对比图已保存至 /home/ubuntu/oilfield_project/油田气窜预测优化/results/residual_model_random_forest_predictions.png
+2025-03-29 10:42:18,645 - residual_model - INFO - 模型已保存至 /home/ubuntu/oilfield_project/油田气窜预测优化/models/residual_model_random_forest.pkl
+2025-03-29 10:42:18,645 - __main__ - INFO - random_forest 模型测试集 R²: 0.9951
+2025-03-29 10:42:18,646 - __main__ - INFO - random_forest 模型测试集 RMSE: 0.0068
+2025-03-29 10:42:18,646 - __main__ - INFO - random_forest 模型测试集 MAE: 0.0027
+2025-03-29 10:42:18,646 - __main__ - INFO - 训练和评估 gradient_boosting 残差模型
+2025-03-29 10:42:18,649 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:18,899 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:18,901 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:18,906 - residual_model - INFO - 物理模型 R²: -0.4637, RMSE: 0.2110, MAE: 0.1187
+2025-03-29 10:42:18,906 - residual_model - INFO - 残差模型 R²: 0.9998, RMSE: 0.0023, MAE: 0.0011
+2025-03-29 10:42:18,906 - residual_model - INFO - R²改进: inf%, RMSE改进: 98.91%, MAE改进: 99.09%
+2025-03-29 10:42:18,906 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:18,908 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:18,912 - residual_model - INFO - 物理模型 R²: -0.2690, RMSE: 0.1101, MAE: 0.0507
+2025-03-29 10:42:18,912 - residual_model - INFO - 残差模型 R²: 0.9536, RMSE: 0.0211, MAE: 0.0094
+2025-03-29 10:42:18,913 - residual_model - INFO - R²改进: inf%, RMSE改进: 80.87%, MAE改进: 81.41%
+2025-03-29 10:42:18,915 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:18,916 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:19,163 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:19,168 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:19,169 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:19,402 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:19,407 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:19,408 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:19,656 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:19,663 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:19,664 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:19,906 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:19,911 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:19,912 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:20,154 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:20,158 - residual_model - INFO - 交叉验证 - 物理模型平均R²: -0.5069
+2025-03-29 10:42:20,158 - residual_model - INFO - 交叉验证 - 残差模型平均R²: 0.8515
+2025-03-29 10:42:20,159 - residual_model - INFO - 交叉验证 - R²改进: inf%
+2025-03-29 10:42:20,159 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:20,159 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:21,783 - residual_model - INFO - 预测结果对比图已保存至 /home/ubuntu/oilfield_project/油田气窜预测优化/results/residual_model_gradient_boosting_predictions.png
+2025-03-29 10:42:21,794 - residual_model - INFO - 模型已保存至 /home/ubuntu/oilfield_project/油田气窜预测优化/models/residual_model_gradient_boosting.pkl
+2025-03-29 10:42:21,794 - __main__ - INFO - gradient_boosting 模型测试集 R²: 0.9536
+2025-03-29 10:42:21,794 - __main__ - INFO - gradient_boosting 模型测试集 RMSE: 0.0211
+2025-03-29 10:42:21,795 - __main__ - INFO - gradient_boosting 模型测试集 MAE: 0.0094
+2025-03-29 10:42:21,795 - __main__ - INFO - 训练和评估 gaussian_process 残差模型
+2025-03-29 10:42:21,797 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:22,193 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:22,195 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:22,200 - residual_model - INFO - 物理模型 R²: -0.4637, RMSE: 0.2110, MAE: 0.1187
+2025-03-29 10:42:22,200 - residual_model - INFO - 残差模型 R²: 1.0000, RMSE: 0.0007, MAE: 0.0006
+2025-03-29 10:42:22,200 - residual_model - INFO - R²改进: inf%, RMSE改进: 99.67%, MAE改进: 99.52%
+2025-03-29 10:42:22,200 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:22,202 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:22,206 - residual_model - INFO - 物理模型 R²: -0.2690, RMSE: 0.1101, MAE: 0.0507
+2025-03-29 10:42:22,206 - residual_model - INFO - 残差模型 R²: 0.9998, RMSE: 0.0015, MAE: 0.0011
+2025-03-29 10:42:22,206 - residual_model - INFO - R²改进: inf%, RMSE改进: 98.60%, MAE改进: 97.89%
+2025-03-29 10:42:22,208 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:22,209 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:22,545 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:22,550 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:22,551 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:22,859 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:22,865 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:22,866 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:23,242 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:23,247 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:23,248 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:23,626 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:23,653 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:23,655 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:23,990 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:23,994 - residual_model - INFO - 交叉验证 - 物理模型平均R²: -0.5069
+2025-03-29 10:42:23,994 - residual_model - INFO - 交叉验证 - 残差模型平均R²: 0.9998
+2025-03-29 10:42:23,994 - residual_model - INFO - 交叉验证 - R²改进: inf%
+2025-03-29 10:42:23,994 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:23,994 - residual_model - WARNING - 物理模型缺少必要特征: permeability
+2025-03-29 10:42:25,635 - residual_model - INFO - 预测结果对比图已保存至 /home/ubuntu/oilfield_project/油田气窜预测优化/results/residual_model_gaussian_process_predictions.png
+2025-03-29 10:42:25,638 - residual_model - INFO - 模型已保存至 /home/ubuntu/oilfield_project/油田气窜预测优化/models/residual_model_gaussian_process.pkl
+2025-03-29 10:42:25,638 - __main__ - INFO - gaussian_process 模型测试集 R²: 0.9998
+2025-03-29 10:42:25,638 - __main__ - INFO - gaussian_process 模型测试集 RMSE: 0.0015
+2025-03-29 10:42:25,638 - __main__ - INFO - gaussian_process 模型测试集 MAE: 0.0011
+2025-03-29 10:42:25,638 - __main__ - INFO - 最佳模型: gaussian_process, 测试集 R²: 0.9998
+2025-03-29 10:42:25,638 - __main__ - INFO - 步骤5: 对最佳模型进行超参数优化
+2025-03-29 10:42:25,642 - residual_model - INFO - 模型已从 /home/ubuntu/oilfield_project/油田气窜预测优化/models/residual_model_gaussian_process.pkl 加载
+2025-03-29 10:42:25,643 - __main__ - INFO - 高斯过程模型不进行额外的超参数优化
+2025-03-29 10:42:25,645 - __main__ - INFO - 模型优化完成
