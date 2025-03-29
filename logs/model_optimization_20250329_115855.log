@@ -1,0 +1,166 @@
+2025-03-29 11:58:55,478 - __main__ - INFO - 开始模型优化流程
+2025-03-29 11:58:55,479 - __main__ - INFO - 步骤1: 加载和预处理数据
+2025-03-29 11:58:55,479 - data_processor - INFO - 正在加载数据文件: /home/ubuntu/oilfield_project/油田气窜预测优化/data/CO2气窜原始表.csv
+2025-03-29 11:58:55,487 - data_processor - INFO - 成功加载数据，共70行，14列
+2025-03-29 11:58:55,487 - data_processor - INFO - 开始数据预处理
+2025-03-29 11:58:55,489 - data_processor - INFO - 列名已转换为英文，当前列名: block, formation_temperature, formation_pressure, pre_injection_pressure, pressure_level, permeability, oil_viscosity, oil_density, effective_thickness, injection_well_fracturing, well_spacing, porosity, pre_injection_oil_saturation, pv_number
+2025-03-29 11:58:55,497 - data_processor - INFO - 列'block'已进行一热编码
+2025-03-29 11:58:55,501 - data_processor - INFO - 列'injection_well_fracturing'已进行一热编码
+2025-03-29 11:58:55,512 - data_processor - INFO - 列'permeability'检测到6个异常值
+2025-03-29 11:58:55,514 - data_processor - INFO - 列'permeability'的异常值已使用Winsorization方法处理
+2025-03-29 11:58:55,515 - data_processor - INFO - 列'oil_viscosity'检测到2个异常值
+2025-03-29 11:58:55,516 - data_processor - INFO - 列'oil_viscosity'的异常值已使用Winsorization方法处理
+2025-03-29 11:58:55,518 - data_processor - INFO - 列'oil_density'检测到4个异常值
+2025-03-29 11:58:55,519 - data_processor - INFO - 列'oil_density'的异常值已使用Winsorization方法处理
+2025-03-29 11:58:55,520 - data_processor - INFO - 列'effective_thickness'检测到2个异常值
+2025-03-29 11:58:55,522 - data_processor - INFO - 列'effective_thickness'的异常值已使用Winsorization方法处理
+2025-03-29 11:58:55,524 - data_processor - INFO - 列'well_spacing'检测到1个异常值
+2025-03-29 11:58:55,526 - data_processor - INFO - 列'well_spacing'的异常值已使用Winsorization方法处理
+2025-03-29 11:58:55,530 - data_processor - INFO - 列'block_EAST VACUUM'检测到1个异常值
+2025-03-29 11:58:55,531 - data_processor - INFO - 列'block_EAST VACUUM'的异常值已使用Winsorization方法处理
+2025-03-29 11:58:55,533 - data_processor - INFO - 列'block_FORD GERALDINE'检测到1个异常值
+2025-03-29 11:58:55,534 - data_processor - INFO - 列'block_FORD GERALDINE'的异常值已使用Winsorization方法处理
+2025-03-29 11:58:55,535 - data_processor - INFO - 列'block_GARBER'检测到1个异常值
+2025-03-29 11:58:55,536 - data_processor - INFO - 列'block_GARBER'的异常值已使用Winsorization方法处理
+2025-03-29 11:58:55,538 - data_processor - INFO - 列'block_LITTLE CREEK'检测到1个异常值
+2025-03-29 11:58:55,540 - data_processor - INFO - 列'block_LITTLE CREEK'的异常值已使用Winsorization方法处理
+2025-03-29 11:58:55,542 - data_processor - INFO - 列'block_LITTLE KNIFE'检测到1个异常值
+2025-03-29 11:58:55,543 - data_processor - INFO - 列'block_LITTLE KNIFE'的异常值已使用Winsorization方法处理
+2025-03-29 11:58:55,545 - data_processor - INFO - 列'block_MALJAMAR'检测到1个异常值
+2025-03-29 11:58:55,546 - data_processor - INFO - 列'block_MALJAMAR'的异常值已使用Winsorization方法处理
+2025-03-29 11:58:55,548 - data_processor - INFO - 列'block_NORTH COLES LEVEE'检测到1个异常值
+2025-03-29 11:58:55,549 - data_processor - INFO - 列'block_NORTH COLES LEVEE'的异常值已使用Winsorization方法处理
+2025-03-29 11:58:55,550 - data_processor - INFO - 列'block_NORTH CROSS'检测到1个异常值
+2025-03-29 11:58:55,551 - data_processor - INFO - 列'block_NORTH CROSS'的异常值已使用Winsorization方法处理
+2025-03-29 11:58:55,553 - data_processor - INFO - 列'block_NORTHEAST PURDY'检测到1个异常值
+2025-03-29 11:58:55,554 - data_processor - INFO - 列'block_NORTHEAST PURDY'的异常值已使用Winsorization方法处理
+2025-03-29 11:58:55,556 - data_processor - INFO - 列'block_Permian Basin（美国）'检测到1个异常值
+2025-03-29 11:58:55,558 - data_processor - INFO - 列'block_Permian Basin（美国）'的异常值已使用Winsorization方法处理
+2025-03-29 11:58:55,560 - data_processor - INFO - 列'block_QUARANTINE BAY'检测到1个异常值
+2025-03-29 11:58:55,561 - data_processor - INFO - 列'block_QUARANTINE BAY'的异常值已使用Winsorization方法处理
+2025-03-29 11:58:55,563 - data_processor - INFO - 列'block_RANGELY'检测到1个异常值
+2025-03-29 11:58:55,564 - data_processor - INFO - 列'block_RANGELY'的异常值已使用Winsorization方法处理
+2025-03-29 11:58:55,565 - data_processor - INFO - 列'block_SACROC (17 PATTERN)'检测到1个异常值
+2025-03-29 11:58:55,566 - data_processor - INFO - 列'block_SACROC (17 PATTERN)'的异常值已使用Winsorization方法处理
+2025-03-29 11:58:55,568 - data_processor - INFO - 列'block_SACROC (4 PATTERN)'检测到1个异常值
+2025-03-29 11:58:55,569 - data_processor - INFO - 列'block_SACROC (4 PATTERN)'的异常值已使用Winsorization方法处理
+2025-03-29 11:58:55,570 - data_processor - INFO - 列'block_SLAUGHTER ESTATE'检测到1个异常值
+2025-03-29 11:58:55,571 - data_processor - INFO - 列'block_SLAUGHTER ESTATE'的异常值已使用Winsorization方法处理
+2025-03-29 11:58:55,574 - data_processor - INFO - 列'block_SOUTH WELCH'检测到1个异常值
+2025-03-29 11:58:55,575 - data_processor - INFO - 列'block_SOUTH WELCH'的异常值已使用Winsorization方法处理
+2025-03-29 11:58:55,577 - data_processor - INFO - 列'block_TWOFREDS'检测到1个异常值
+2025-03-29 11:58:55,578 - data_processor - INFO - 列'block_TWOFREDS'的异常值已使用Winsorization方法处理
+2025-03-29 11:58:55,580 - data_processor - INFO - 列'block_WEEKS ISLAND'检测到1个异常值
+2025-03-29 11:58:55,581 - data_processor - INFO - 列'block_WEEKS ISLAND'的异常值已使用Winsorization方法处理
+2025-03-29 11:58:55,582 - data_processor - INFO - 列'block_WERTZ'检测到1个异常值
+2025-03-29 11:58:55,583 - data_processor - INFO - 列'block_WERTZ'的异常值已使用Winsorization方法处理
+2025-03-29 11:58:55,585 - data_processor - INFO - 列'block_WEST SUSSEX'检测到1个异常值
+2025-03-29 11:58:55,586 - data_processor - INFO - 列'block_WEST SUSSEX'的异常值已使用Winsorization方法处理
+2025-03-29 11:58:55,588 - data_processor - INFO - 列'block_Weyburn（加拿大）'检测到1个异常值
+2025-03-29 11:58:55,589 - data_processor - INFO - 列'block_Weyburn（加拿大）'的异常值已使用Winsorization方法处理
+2025-03-29 11:58:55,591 - data_processor - INFO - 列'block_唐5块'检测到3个异常值
+2025-03-29 11:58:55,593 - data_processor - INFO - 列'block_唐5块'的异常值已使用Winsorization方法处理
+2025-03-29 11:58:55,595 - data_processor - INFO - 列'block_天95块'检测到7个异常值
+2025-03-29 11:58:55,596 - data_processor - INFO - 列'block_天95块'的异常值已使用Winsorization方法处理
+2025-03-29 11:58:55,597 - data_processor - INFO - 列'block_富-14'检测到1个异常值
+2025-03-29 11:58:55,598 - data_processor - INFO - 列'block_富-14'的异常值已使用Winsorization方法处理
+2025-03-29 11:58:55,600 - data_processor - INFO - 列'block_崔9块'检测到2个异常值
+2025-03-29 11:58:55,601 - data_processor - INFO - 列'block_崔9块'的异常值已使用Winsorization方法处理
+2025-03-29 11:58:55,602 - data_processor - INFO - 列'block_庄13块'检测到2个异常值
+2025-03-29 11:58:55,603 - data_processor - INFO - 列'block_庄13块'的异常值已使用Winsorization方法处理
+2025-03-29 11:58:55,605 - data_processor - INFO - 列'block_树101'检测到1个异常值
+2025-03-29 11:58:55,607 - data_processor - INFO - 列'block_树101'的异常值已使用Winsorization方法处理
+2025-03-29 11:58:55,609 - data_processor - INFO - 列'block_濮1-1井组'检测到1个异常值
+2025-03-29 11:58:55,611 - data_processor - INFO - 列'block_濮1-1井组'的异常值已使用Winsorization方法处理
+2025-03-29 11:58:55,612 - data_processor - INFO - 列'block_联38块'检测到4个异常值
+2025-03-29 11:58:55,613 - data_processor - INFO - 列'block_联38块'的异常值已使用Winsorization方法处理
+2025-03-29 11:58:55,615 - data_processor - INFO - 列'block_腰英台'检测到1个异常值
+2025-03-29 11:58:55,616 - data_processor - INFO - 列'block_腰英台'的异常值已使用Winsorization方法处理
+2025-03-29 11:58:55,617 - data_processor - INFO - 列'block_花26块'检测到4个异常值
+2025-03-29 11:58:55,618 - data_processor - INFO - 列'block_花26块'的异常值已使用Winsorization方法处理
+2025-03-29 11:58:55,620 - data_processor - INFO - 列'block_花32块'检测到2个异常值
+2025-03-29 11:58:55,621 - data_processor - INFO - 列'block_花32块'的异常值已使用Winsorization方法处理
+2025-03-29 11:58:55,623 - data_processor - INFO - 列'block_芳-48'检测到1个异常值
+2025-03-29 11:58:55,625 - data_processor - INFO - 列'block_芳-48'的异常值已使用Winsorization方法处理
+2025-03-29 11:58:55,627 - data_processor - INFO - 列'block_草舍'检测到1个异常值
+2025-03-29 11:58:55,628 - data_processor - INFO - 列'block_草舍'的异常值已使用Winsorization方法处理
+2025-03-29 11:58:55,630 - data_processor - INFO - 列'block_邵23块'检测到4个异常值
+2025-03-29 11:58:55,631 - data_processor - INFO - 列'block_邵23块'的异常值已使用Winsorization方法处理
+2025-03-29 11:58:55,632 - data_processor - INFO - 列'block_邵24块'检测到1个异常值
+2025-03-29 11:58:55,633 - data_processor - INFO - 列'block_邵24块'的异常值已使用Winsorization方法处理
+2025-03-29 11:58:55,635 - data_processor - INFO - 列'block_马35块'检测到3个异常值
+2025-03-29 11:58:55,636 - data_processor - INFO - 列'block_马35块'的异常值已使用Winsorization方法处理
+2025-03-29 11:58:55,637 - data_processor - INFO - 列'block_马38块'检测到4个异常值
+2025-03-29 11:58:55,639 - data_processor - INFO - 列'block_马38块'的异常值已使用Winsorization方法处理
+2025-03-29 11:58:55,641 - data_processor - INFO - 列'block_马3块'检测到3个异常值
+2025-03-29 11:58:55,643 - data_processor - INFO - 列'block_马3块'的异常值已使用Winsorization方法处理
+2025-03-29 11:58:55,644 - data_processor - INFO - 列'block_高 89-4'检测到1个异常值
+2025-03-29 11:58:55,645 - data_processor - INFO - 列'block_高 89-4'的异常值已使用Winsorization方法处理
+2025-03-29 11:58:55,647 - data_processor - INFO - 列'block_黄3'检测到1个异常值
+2025-03-29 11:58:55,648 - data_processor - INFO - 列'block_黄3'的异常值已使用Winsorization方法处理
+2025-03-29 11:58:55,650 - data_processor - INFO - 列'block_黑59'检测到1个异常值
+2025-03-29 11:58:55,651 - data_processor - INFO - 列'block_黑59'的异常值已使用Winsorization方法处理
+2025-03-29 11:58:55,654 - data_processor - INFO - 列'permeability'偏斜度为1.97，已创建对数变换特征
+2025-03-29 11:58:55,655 - data_processor - INFO - 列'oil_density'偏斜度为2.21，已创建对数变换特征
+2025-03-29 11:58:55,656 - data_processor - INFO - 列'effective_thickness'偏斜度为1.73，已创建对数变换特征
+2025-03-29 11:58:55,664 - data_processor - INFO - 目标变量'pv_number'已应用对数变换 (log1p)
+2025-03-29 11:58:55,673 - data_processor - INFO - 使用StandardScaler对11个特征进行归一化
+2025-03-29 11:58:55,816 - data_processor - INFO - 数据预处理完成。处理前：(70, 14)，处理后：(70, 59)
+2025-03-29 11:58:55,816 - data_processor - INFO - 新增特征: {'block_草舍', 'block_邵24块', 'block_NORTH CROSS', 'pv_number_original', 'formation_pressure', 'block_SACROC (4 PATTERN)', 'block_庄13块', 'block_芳-48', 'block_黑59', 'block_濮1-1井组', 'block_NORTH COLES LEVEE', 'block_花32块', 'block_马3块', 'pre_injection_oil_saturation', 'block_RANGELY', 'oil_density_log', 'block_唐5块', 'block_联38块', 'block_LITTLE KNIFE', 'pressure_level', 'block_马35块', 'block_MALJAMAR', 'block_马38块', 'effective_thickness', 'block_WEEKS ISLAND', 'block_树101', 'block_花26块', 'block_GARBER', 'block_Weyburn（加拿大）', 'block_高 89-4', 'porosity', 'formation_temperature', 'block_腰英台', 'block_SOUTH WELCH', 'block_SLAUGHTER ESTATE', 'effective_thickness_log', 'oil_viscosity', 'block_天95块', 'permeability', 'block_WEST SUSSEX', 'block_SACROC (17 PATTERN)', 'well_spacing', 'block_EAST VACUUM', 'block_NORTHEAST PURDY', 'pv_number', 'block_邵23块', 'block_TWOFREDS', 'block_WERTZ', 'block_富-14', 'block_崔9块', 'block_Permian Basin（美国）', 'block_FORD GERALDINE', 'block_黄3', 'block_QUARANTINE BAY', 'oil_density', 'pre_injection_pressure', 'block_LITTLE CREEK', 'permeability_log', 'injection_well_fracturing_是'}
+2025-03-29 11:58:55,816 - __main__ - INFO - 步骤2: 创建物理约束特征
+2025-03-29 11:58:55,817 - enhanced_features_optimized - WARNING - 缺少创建物理特征所需的列: ['temperature']
+2025-03-29 11:58:55,826 - enhanced_features_optimized - INFO - 创建了11个物理约束特征
+2025-03-29 11:58:55,826 - __main__ - INFO - 步骤3: 特征选择
+2025-03-29 11:58:55,826 - __main__ - INFO - 使用 mutual_info 方法选择特征
+2025-03-29 11:58:55,953 - enhanced_features_optimized - INFO - 选择了10个特征: ['pv_number_original', 'formation_temperature', 'pressure_level', 'mobility_ratio', 'oil_viscosity', 'fingering_index', 'phase_mobility_index', 'pressure_viscosity_ratio', 'effective_thickness_log', 'gravity_number']
+2025-03-29 11:58:56,866 - __main__ - INFO - mutual_info 方法特征集的平均R²: 0.7991
+2025-03-29 11:58:56,867 - __main__ - INFO - 使用 random_forest 方法选择特征
+2025-03-29 11:58:57,073 - enhanced_features_optimized - INFO - 选择了10个特征: ['pv_number_original', 'spacing_thickness_ratio', 'pre_injection_pressure', 'porosity', 'pressure_viscosity_ratio', 'reservoir_energy', 'pre_injection_oil_saturation', 'effective_thickness', 'effective_thickness_log', 'gravity_number']
+2025-03-29 11:58:57,873 - __main__ - INFO - random_forest 方法特征集的平均R²: 0.7986
+2025-03-29 11:58:57,873 - __main__ - INFO - 使用 lasso 方法选择特征
+2025-03-29 11:58:57,883 - enhanced_features_optimized - INFO - 选择了10个特征: ['pv_number_original', 'pressure_level', 'oil_viscosity', 'effective_thickness', 'mobility_ratio', 'fingering_index', 'pre_injection_pressure', 'formation_pressure', 'formation_temperature', 'pressure_viscosity_ratio']
+2025-03-29 11:58:58,669 - __main__ - INFO - lasso 方法特征集的平均R²: 0.7848
+2025-03-29 11:58:58,669 - __main__ - INFO - 使用 hybrid 方法选择特征
+2025-03-29 11:58:58,995 - enhanced_features_optimized - INFO - 选择了10个特征: ['pv_number_original', 'pressure_level', 'effective_thickness', 'mobility_ratio', 'fingering_index', 'oil_viscosity', 'pressure_viscosity_ratio', 'formation_temperature', 'effective_thickness_log', 'gravity_number']
+2025-03-29 11:58:59,790 - __main__ - INFO - hybrid 方法特征集的平均R²: 0.7917
+2025-03-29 11:58:59,790 - __main__ - INFO - 最佳特征选择方法: mutual_info, R²: 0.7991
+2025-03-29 11:58:59,791 - __main__ - INFO - 最佳特征集 (共10个): ['pv_number_original', 'formation_temperature', 'pressure_level', 'mobility_ratio', 'oil_viscosity', 'fingering_index', 'phase_mobility_index', 'pressure_viscosity_ratio', 'effective_thickness_log', 'gravity_number', 'pv_number']
+2025-03-29 11:58:59,794 - __main__ - INFO - 步骤4: 测试不同的残差模型
+2025-03-29 11:58:59,794 - __main__ - INFO - 训练和评估 random_forest 残差模型
+2025-03-29 11:58:59,975 - residual_model_optimized - INFO - random_forest 模型训练集 R²: -16.3328
+2025-03-29 11:58:59,975 - residual_model_optimized - INFO - random_forest 模型测试集 R²: -937.0799
+2025-03-29 11:58:59,975 - residual_model_optimized - INFO - random_forest 模型测试集 RMSE: 2.9925
+2025-03-29 11:58:59,975 - residual_model_optimized - INFO - random_forest 模型测试集 MAE: 1.4156
+2025-03-29 11:58:59,975 - __main__ - INFO - random_forest 模型测试集 R²: -937.0799
+2025-03-29 11:58:59,976 - __main__ - INFO - random_forest 模型测试集 RMSE: 2.9925
+2025-03-29 11:58:59,976 - __main__ - INFO - random_forest 模型测试集 MAE: 1.4156
+2025-03-29 11:58:59,976 - __main__ - INFO - random_forest 模型测试集 MAPE: 11897.7852
+2025-03-29 11:58:59,976 - __main__ - INFO - random_forest 模型测试集 调整R²: -4064.0129
+2025-03-29 11:59:00,014 - residual_model_optimized - INFO - 模型已保存到 /home/ubuntu/oilfield_project/油田气窜预测优化/models/residual_model_random_forest.pkl
+2025-03-29 11:59:12,480 - __main__ - INFO - 训练和评估 gradient_boosting 残差模型
+2025-03-29 11:59:12,607 - residual_model_optimized - INFO - gradient_boosting 模型训练集 R²: 0.9875
+2025-03-29 11:59:12,608 - residual_model_optimized - INFO - gradient_boosting 模型测试集 R²: -930.8046
+2025-03-29 11:59:12,608 - residual_model_optimized - INFO - gradient_boosting 模型测试集 RMSE: 2.9825
+2025-03-29 11:59:12,608 - residual_model_optimized - INFO - gradient_boosting 模型测试集 MAE: 1.2078
+2025-03-29 11:59:12,608 - __main__ - INFO - gradient_boosting 模型测试集 R²: -930.8046
+2025-03-29 11:59:12,608 - __main__ - INFO - gradient_boosting 模型测试集 RMSE: 2.9825
+2025-03-29 11:59:12,608 - __main__ - INFO - gradient_boosting 模型测试集 MAE: 1.2078
+2025-03-29 11:59:12,608 - __main__ - INFO - gradient_boosting 模型测试集 MAPE: 6316.8720
+2025-03-29 11:59:12,608 - __main__ - INFO - gradient_boosting 模型测试集 调整R²: -4036.8198
+2025-03-29 11:59:12,620 - residual_model_optimized - INFO - 模型已保存到 /home/ubuntu/oilfield_project/油田气窜预测优化/models/residual_model_gradient_boosting.pkl
+2025-03-29 11:59:19,383 - __main__ - INFO - 训练和评估 gaussian_process 残差模型
+2025-03-29 11:59:20,219 - residual_model_optimized - INFO - gaussian_process 模型训练集 R²: 0.9999
+2025-03-29 11:59:20,219 - residual_model_optimized - INFO - gaussian_process 模型测试集 R²: 0.9785
+2025-03-29 11:59:20,219 - residual_model_optimized - INFO - gaussian_process 模型测试集 RMSE: 0.0143
+2025-03-29 11:59:20,219 - residual_model_optimized - INFO - gaussian_process 模型测试集 MAE: 0.0068
+2025-03-29 11:59:20,220 - __main__ - INFO - gaussian_process 模型测试集 R²: 0.9785
+2025-03-29 11:59:20,220 - __main__ - INFO - gaussian_process 模型测试集 RMSE: 0.0143
+2025-03-29 11:59:20,220 - __main__ - INFO - gaussian_process 模型测试集 MAE: 0.0068
+2025-03-29 11:59:20,220 - __main__ - INFO - gaussian_process 模型测试集 MAPE: 35.4089
+2025-03-29 11:59:20,220 - __main__ - INFO - gaussian_process 模型测试集 调整R²: 0.9068
+2025-03-29 11:59:20,224 - residual_model_optimized - INFO - 模型已保存到 /home/ubuntu/oilfield_project/油田气窜预测优化/models/residual_model_gaussian_process.pkl
+2025-03-29 11:59:42,744 - __main__ - WARNING - SHAP值计算失败: The passed model is not callable and cannot be analyzed directly with the given masker! Model: GaussianProcessRegressor(kernel=1**2 * Matern(length_scale=1, nu=1.5) + WhiteKernel(noise_level=0.1),
+                         n_restarts_optimizer=10, normalize_y=True,
+                         random_state=42)
+2025-03-29 11:59:42,744 - __main__ - INFO - 最佳模型: gaussian_process, 测试集 R²: 0.9785
+2025-03-29 11:59:43,204 - __main__ - INFO - 模型优化成功! 最佳R²: 0.9785 >= 目标R²: 0.85
